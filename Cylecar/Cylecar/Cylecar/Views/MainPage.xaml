@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Cylecar"
              xmlns:img="clr-namespace:Cylecar.Images"
-             x:Class="Cylecar.MainPage" BackgroundImage="chinchetaAmbar.png">
+             x:Class="Cylecar.MainPage">
 
     <ListView x:Name="navigationList" RowHeight="40" SeparatorVisibility="Default"
                       Margin="20" SeparatorColor="Black" BackgroundColor="Transparent" ItemSelected="NavigationList_ItemSelected"
