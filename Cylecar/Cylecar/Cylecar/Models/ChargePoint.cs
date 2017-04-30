@@ -1,5 +1,4 @@
-﻿using Java.Util;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,7 +18,7 @@ namespace Cylecar.Models
         public int PostalCode { get; set; }
         public string City { get; set; }
         //public Geopoint Location { get; set; }
-        public Date LastUpdate { get; set; }
+        public DateTime LastUpdate { get; set; }
         public Uri Link { get; set; }
     }
 }
