@@ -2,10 +2,24 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Cylecar"
-             x:Class="Cylecar.MainPage">
+             xmlns:img="clr-namespace:Cylecar.Images"
+             x:Class="Cylecar.MainPage" BackgroundImage="chinchetaAmbar.png">
 
-	<Label Text="Welcome to Xamarin Forms!" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center" />
+    <ListView x:Name="navigationList" RowHeight="40" SeparatorVisibility="Default"
+                      Margin="20" SeparatorColor="Black" BackgroundColor="Transparent" ItemSelected="NavigationList_ItemSelected"
+                      HeightRequest="200">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="Center"
+                                         Orientation="Horizontal" Spacing="10">
+                        <Label Text="{Binding Title}" FontSize="20" FontAttributes="Bold" FontFamily="Arial"
+                                       VerticalOptions="Center" HorizontalOptions="Center" TextColor="Black"/>
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+
+    </ListView>
 
 </ContentPage>
