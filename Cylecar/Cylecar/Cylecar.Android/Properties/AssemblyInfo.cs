@@ -32,3 +32,15 @@ using Android.App;
 // Add some common permissions, these can be removed if not needed
 [assembly: UsesPermission(Android.Manifest.Permission.Internet)]
 [assembly: UsesPermission(Android.Manifest.Permission.WriteExternalStorage)]
+
+//Add permissions necesary for LocationServices --+INFO: https://developer.xamarin.com/recipes/android/os_device_resources/gps/get_current_device_location/
+//Step 1
+[assembly: UsesPermission(Android.Manifest.Permission.AccessFineLocation)]
+[assembly: UsesPermission(Android.Manifest.Permission.AccessCoarseLocation)]
+//Step 2
+//Declare the permissions necessary to use the Geocoder class. 
+//This is not strictly necessary for obtaining the GPS coordinates of the device, 
+//but this example will attempt to provide a street address for the current location:
+
+[assembly: UsesPermission(Android.Manifest.Permission.Internet)]
+
