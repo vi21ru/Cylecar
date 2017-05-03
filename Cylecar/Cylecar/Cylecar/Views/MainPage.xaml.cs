@@ -8,7 +8,7 @@ using Xamarin.Forms;
 
 namespace Cylecar
 {
-    public partial class MainPage : ContentPage
+    public partial class MainPage : MasterDetailPage
     {
         public List<MenuItemPage> listaMenu { get; set; }
         public MainPage()
@@ -33,6 +33,7 @@ namespace Cylecar
 
 
             navigationList.ItemsSource = listaMenu;
+            Detail = new NavigationPage((Page)Activator.CreateInstance(typeof(ConfigPage)));
         }
 
         private void NavigationList_ItemSelected(object sender, SelectedItemChangedEventArgs e)
