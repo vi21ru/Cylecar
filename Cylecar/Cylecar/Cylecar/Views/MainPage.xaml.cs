@@ -17,7 +17,7 @@ namespace Cylecar
 
             listaMenu = new List<MenuItemPage>();
 
-            var page1 = new MenuItemPage() { Title = "Estaciones de recarga favoritas", TargetType=null };
+            var page1 = new MenuItemPage() { Title = "Estaciones de recarga favoritas", TargetType=typeof(CreditsPage) };
             var page2 = new MenuItemPage() { Title = "Busquedas recientes", TargetType = typeof(SearchPage) };
             var page3 = new MenuItemPage() { Title = "Busqueda por ciudades", TargetType = typeof(SearchPage) };
             var page4 = new MenuItemPage() { Title = "Busqueda por provincias", TargetType = typeof(SearchPage) };
@@ -33,12 +33,16 @@ namespace Cylecar
 
 
             navigationList.ItemsSource = listaMenu;
-            Detail = new NavigationPage((Page)Activator.CreateInstance(typeof(ConfigPage)));
+            Detail = new NavigationPage((Page)Activator.CreateInstance(typeof(SearchPage)));
         }
 
         private void NavigationList_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
+            var item = (MenuItemPage)e.SelectedItem;
+            Type page = item.TargetType;
 
+            Detail = new NavigationPage((Page)Activator.CreateInstance(page));
+            IsPresented = false;
         }
     }
 }
