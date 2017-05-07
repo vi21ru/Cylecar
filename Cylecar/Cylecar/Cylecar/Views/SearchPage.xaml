@@ -3,11 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Cylecar.Views.SearchPage"
              xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
-             Title="SearchPage">
+             Title="Busqueda Estaciones">
     <StackLayout Orientation="Vertical">
         <SearchBar x:Name="sbSearch" Placeholder="Buscar" HorizontalTextAlignment="End" />
         <maps:Map WidthRequest="320" HeightRequest="200" IsShowingUser="true" MapType="Hybrid" />
-        <Slider HeightRequest="20" WidthRequest="20" />
+        <!--<Slider HeightRequest="20" WidthRequest="20" />-->
     </StackLayout>
 
 </ContentPage>

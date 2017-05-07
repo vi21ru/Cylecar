@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Cylecar.Views.ListViewPage"
+             Title="ListViewPage">
+    <ListView x:Name="estaciones"  RowHeight="40" SeparatorVisibility="Default"
+                      Margin="20" SeparatorColor="Black" BackgroundColor="Transparent"  ItemSelected="estacion_ItemSelected"
+                      HeightRequest="200" >
+        <ListView.ItemTemplate>
+
+            <DataTemplate>
+                <ViewCell>
+                    <Grid>
+                        <Label Text="Hola"></Label>
+                        <Entry Placeholder="Introduce"></Entry>
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+        
+    </ListView>
+</ContentPage>
