@@ -159,18 +159,6 @@
     <AndroidResource Include="Resources\drawable\masterback.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-hdpi\masterback.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xhdpi\masterback.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xxhdpi\masterback.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Resources\drawable-hdpi\iconBurguerV.png" />
-    <Content Include="Resources\drawable-xhdpi\iconBurguerV.png" />
-    <Content Include="Resources\drawable-xxhdpi\iconBurguerV.png" />
     <Content Include="Resources\drawable\iconBurguerV.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
