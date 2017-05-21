@@ -1,4 +1,5 @@
 ﻿using Cylecar.Models;
+using Cylecar.Services;
 using Cylecar.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -23,17 +24,11 @@ namespace Cylecar.Views
         {
             InitializeComponent();
             BindingContext = new ContentPageViewModel();
+            RestService rs = new RestService();
+            rs.getData();
         }
 
-        private List<ChargePoint> RecoveryList() {
-
-            return null;
-        }
-
-        private void estacion_ItemSelected(object sender, SelectedItemChangedEventArgs e)
-        {
-
-        }
+        
     }
 
     class ListViewPageViewModel : INotifyPropertyChanged

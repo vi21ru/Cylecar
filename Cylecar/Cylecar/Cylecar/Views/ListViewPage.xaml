@@ -4,7 +4,7 @@
              x:Class="Cylecar.Views.ListViewPage"
              Title="ListViewPage">
     <ListView x:Name="estaciones"  RowHeight="40" SeparatorVisibility="Default"
-                      Margin="20" SeparatorColor="Black" BackgroundColor="Transparent"  ItemSelected="estacion_ItemSelected"
+                      Margin="20" SeparatorColor="Black" BackgroundColor="Transparent"
                       HeightRequest="200" >
         <ListView.ItemTemplate>
 
