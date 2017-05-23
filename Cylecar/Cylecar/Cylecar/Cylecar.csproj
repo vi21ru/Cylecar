@@ -39,7 +39,6 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Models\Punto.cs" />
     <Compile Include="ViewModels\ContentPageViewModel.cs" />
     <Compile Include="Views\ConfigPage.xaml.cs">
       <DependentUpon>ConfigPage.xaml</DependentUpon>

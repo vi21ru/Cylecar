@@ -1,13 +1,9 @@
 ﻿
 using Cylecar.Models;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Net.Http;
-using System.Text;
 using Xamarin.Forms;
 
 namespace Cylecar.Services
@@ -15,7 +11,7 @@ namespace Cylecar.Services
     class RestService
     {
 
-        //public List<ChargePoint> Items { get; private set; }
+        public List<ChargePoint> Items { get; private set; }
 
         /* public async Task<List<ChargePoint>> RefreshDataAsync()
          {
@@ -59,6 +55,8 @@ namespace Cylecar.Services
                 var s = httpClient.GetStringAsync(uri).Result; //obtengo string con datos
 
                 var li = s.Replace('\n', '&');
+                char caracter='\\';
+                //li = s.Replace("\""+caracter +"\"", "");
                 var lineas = li.Split('&');
                 var num = lineas.Length;
                 var stringLista = new List<string>();
@@ -70,6 +68,23 @@ namespace Cylecar.Services
                 var nums = stringLista.Count;
                 var columnas = lineas[1].Split(';');
                 var colNames = columnas.Length;
+
+                foreach (string l in sListaDef) {
+                    
+                    var res = l.Split(';');
+                    
+                    ChargePoint cp = new ChargePoint();
+                    cp.Descripcion = res[0].Substring(res[0].IndexOf("\"")+1,res[0].LastIndexOf("\"")-1);
+                    cp.Edificio = res[2].Substring(res[0].IndexOf("\"") + 1, res[0].LastIndexOf("\"") - 1);
+                    cp.Calle = res[4].Substring(res[4].IndexOf("\"") + 1, res[4].LastIndexOf("\"") - 1);
+                    cp.CodigoPostal = res[5].Substring(res[5].IndexOf("\"") + 1, res[5].LastIndexOf("\"") - 1);
+                    cp.Localidad = res[6].Substring(res[6].IndexOf("\"") + 1, res[6].LastIndexOf("\"") - 1);
+                    var sPosition = res[14].Split('#');
+                    cp.Localizacion = new Xamarin.Forms.Maps.Position(Double.Parse(sPosition[0]), Double.Parse(sPosition[1]));
+                    cp.Enlace = res[20];
+                    Items.Add(cp);
+                    
+                }
                 //var array = s.Split(';');
                 //int count = array.Length;
                 //var campos=array.
