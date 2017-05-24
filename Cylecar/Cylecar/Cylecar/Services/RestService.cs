@@ -2,8 +2,10 @@
 using Cylecar.Models;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Net.Http;
+using System.Text.RegularExpressions;
 using Xamarin.Forms;
 
 namespace Cylecar.Services
@@ -40,7 +42,7 @@ namespace Cylecar.Services
 
              return Items;
          }*/
-        public async void getData(ListView lista)
+        public async void getData(List<ChargePoint> lista)
         {
             try { 
             /*HttpClient httpClient = new HttpClient();
@@ -54,109 +56,46 @@ namespace Cylecar.Services
             Uri uri = new Uri("http://www.datosabiertos.jcyl.es/web/jcyl/risp/es/energia/vehiculo_electrico/1284273412751.csv");
                 var s = httpClient.GetStringAsync(uri).Result; //obtengo string con datos
 
-                var li = s.Replace('\n', '&');
-                char caracter='\\';
+                s = Regex.Replace(s, "\n\"", "&");
+                s = Regex.Replace(s, "\"", "");
+                //char caracter = '\\';
                 //li = s.Replace("\""+caracter +"\"", "");
-                var lineas = li.Split('&');
+                var lineas = Regex.Split(s, "&");
                 var num = lineas.Length;
                 var stringLista = new List<string>();
 
-                foreach (string st in lineas) {
+                foreach (string st in lineas)
+                {
                     stringLista.Add(st);
                 }
-                var sListaDef = stringLista.Skip(2);
+                var sListaDef = stringLista.Skip(1);
                 var nums = stringLista.Count;
-                var columnas = lineas[1].Split(';');
-                var colNames = columnas.Length;
+                //var columnas = lineas[1].Split(';');
+                //var colNames = columnas.Length;
 
-                foreach (string l in sListaDef) {
-                    
-                    var res = l.Split(';');
+                foreach (string l in sListaDef)
+                {
+
+                    var res = Regex.Split(l, ";");
                     
                     ChargePoint cp = new ChargePoint();
-                    cp.Descripcion = res[0].Substring(res[0].IndexOf("\"")+1,res[0].LastIndexOf("\"")-1);
-                    cp.Edificio = res[2].Substring(res[0].IndexOf("\"") + 1, res[0].LastIndexOf("\"") - 1);
-                    cp.Calle = res[4].Substring(res[4].IndexOf("\"") + 1, res[4].LastIndexOf("\"") - 1);
-                    cp.CodigoPostal = res[5].Substring(res[5].IndexOf("\"") + 1, res[5].LastIndexOf("\"") - 1);
-                    cp.Localidad = res[6].Substring(res[6].IndexOf("\"") + 1, res[6].LastIndexOf("\"") - 1);
+                    cp.Descripcion = res[0];
+                    cp.Edificio = res[2];
+                    cp.Calle = res[4];
+                    cp.CodigoPostal = res[5];
+                    cp.Localidad = res[6];
                     var sPosition = res[14].Split('#');
-                    cp.Localizacion = new Xamarin.Forms.Maps.Position(Double.Parse(sPosition[0]), Double.Parse(sPosition[1]));
-                    cp.Enlace = res[20];
-                    Items.Add(cp);
-                    
+
+                    cp.Localizacion = new Xamarin.Forms.Maps.Position(Double.Parse(sPosition[0]), double.Parse(sPosition[1]));
+                    string link = res[20];
+                    cp.Enlace = link;
+                    lista.Add(cp);
+
                 }
-                //var array = s.Split(';');
-                //int count = array.Length;
-                //var campos=array.
-                //var mytest = s;
-                //var myStream = s.GetType();
-                //var name = myStream.Name;
-                //var x = myStream.ToString();
-                //var y = myStream.FullName;
-                //var fulname = y;
-            /*StreamReader reader = new StreamReader(s, Encoding.GetEncoding("ISO-8859-1"));
                 
-            System.Text.StringBuilder campo = new StringBuilder();
-            int codChar;
-            int i = 0;
-            List<String[]> filas = new List<string[]>();
-            String[] campos = new String[21];
-            bool cierraComillas = true; //comillas emparejadas
-            bool EOF = false;
-            while (!EOF)
-            {
-                codChar = reader.Read();
-                switch (codChar)
-                {
-                    case -1: //EOF
-                        EOF = true;
-                        break;
-                    case 10: //LF=0A
-                        if (cierraComillas)
-                        {
-                            filas.Add(campos);
-                            i = 0;
-                            campos = new String[21];
-                        }
-                        else campo.Append((Char)codChar);
-                        break;
-                    case 13: //CR=0D (no procede en este caso)
-
-                        break;
-                    case 34: //comillas (delimitador de texto)
-                        cierraComillas = !cierraComillas;
-                        break;
-                    case 59: //punto y coma (separador de campos)
-                        if (cierraComillas)
-                        {
-                            campos[i++] = campo.ToString();
-                            campo.Clear();
-                        }
-                        else
-                        {
-                            campo.Append((Char)codChar);
-                        }
-                        break;
-
-                    default:
-                        campo.Append((Char)codChar);
-                        break;
-                }
             }
-            var resultado = (from punto in filas
-                             select new Punto
-                             {
-                                 Nombre = punto[0],
-                                 Datos = punto[2],
-                                 Calle = punto[4],
-                                 Localidad = punto[6]
-                             }).Skip(2); //salto las dos primeras filas y obtengo la colección de puntos de recarga
-                                         //la primera fila contiene la fecha de actualización
-                                         //la segunda fila contiene los encabezados de los campos
-            lista.ItemsSource = resultado;*/
-            }
-            catch (Exception es){
-
+            catch (Exception ex){
+                Debug.WriteLine("Error: "+ex.Message+" - "+ex.StackTrace);
             }
             //var respuestaJson = clienteHttp.GetStringAsync(uri).Result;
             // var resJson = clienteHttp.GetStringAsync(uri).Result;

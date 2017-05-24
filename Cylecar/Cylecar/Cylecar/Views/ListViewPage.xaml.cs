@@ -23,13 +23,16 @@ namespace Cylecar.Views
         public ListViewPage()
         {
             InitializeComponent();
+            
             JsonContent();
             BindingContext = new ContentPageViewModel();
             
         }
         public void JsonContent() {
             RestService rs = new RestService();
-            rs.getData(estaciones);
+            listaEstaciones = new List<ChargePoint>();
+            rs.getData(listaEstaciones);
+            estaciones.ItemsSource = listaEstaciones;
         }
 
         
