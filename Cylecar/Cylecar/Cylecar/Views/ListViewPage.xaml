@@ -3,29 +3,61 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Cylecar.Views.ListViewPage"
              Title="ListViewPage">
-    <ListView x:Name="estaciones"  RowHeight="40" SeparatorVisibility="None"
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <OnPlatform x:Key="boxSize"
+                  x:TypeArguments="x:Double"
+                  iOS="20"
+                  Android="20"
+                  WinPhone="35" />
+
+            <!-- This is only an issue on the iPhone; Android and
+           WinPhone auto size the row height to the contents. -->
+            <OnPlatform x:Key="rowHeight"
+                  x:TypeArguments="x:Int32"
+                  iOS="90"
+                  Android="90"
+                  WinPhone="105" />
+
+            
+
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ListView x:Name="estaciones"  RowHeight="{StaticResource rowHeight}" SeparatorVisibility="None"
                       Margin="20" SeparatorColor="Black" BackgroundColor="Transparent"
                       HeightRequest="200" >
         <ListView.ItemTemplate>
 
             <DataTemplate>
                 <ViewCell>
-                    
-                        
-                        <StackLayout>
-                        <Label Text="{Binding Edificio}"></Label>
-                        <Label Text="{Binding Descripcion}"></Label>
-                        </StackLayout>
-                        
-                            
-                        <!--<Label Text="{Binding Calle}" Grid.Row="2"></Label>
-                        <Label Text="{Binding CodigoPostal}" Grid.Row="3"></Label>-->
-                        
-                   
 
-                    
-                        
-                    
+
+                    <StackLayout Padding="5, 5, 0, 5"
+                         Orientation="Horizontal"
+                         Spacing="15">
+
+                        <BoxView WidthRequest="{StaticResource boxSize}"
+                       HeightRequest="{StaticResource boxSize}"
+                       Color="{Binding Privado}" />
+
+                        <StackLayout Padding="10, 0, 0, 0"
+                           VerticalOptions="Center">
+
+                            <Label Text="{Binding Descripcion}"
+                       FontAttributes="Bold"
+                       FontSize="Medium" />
+                            <Label Text="{Binding Edificio}"
+                       FontAttributes="Bold"
+                       FontSize="Medium" />
+
+                            <!--<Label Text="{Binding Calle}" Grid.Row="2"></Label>
+                        <Label Text="{Binding CodigoPostal}" Grid.Row="3"></Label>-->
+
+
+                        </StackLayout>
+
+                    </StackLayout>
+
                 </ViewCell>
             </DataTemplate>
         </ListView.ItemTemplate>

@@ -80,6 +80,12 @@ namespace Cylecar.Services
                     
                     ChargePoint cp = new ChargePoint();
                     cp.Descripcion = res[0];
+                    if (res[0].Contains("privado") | res[0].Contains("exclusivo"))
+                    {
+                        cp.Privado = "Red";
+                    }
+                    else
+                        cp.Privado = "Green";
                     cp.Edificio = res[2];
                     cp.Calle = res[4];
                     cp.CodigoPostal = res[5];

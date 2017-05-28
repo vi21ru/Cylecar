@@ -11,6 +11,7 @@ namespace Cylecar.Models
     {
         public string Descripcion { get; set; }
         public string Edificio { get; set; }
+        public string Privado { get; set; }
         public string CodigoPostal { get; set; }
         public string Calle { get; set; }
         public string Localidad { get; set; }
