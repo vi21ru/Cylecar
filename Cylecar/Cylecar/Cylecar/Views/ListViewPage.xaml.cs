@@ -35,7 +35,11 @@ namespace Cylecar.Views
             estaciones.ItemsSource = listaEstaciones;
         }
 
-        
+        private void estaciones_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            var item = (ChargePoint)e.SelectedItem;
+            ((NavigationPage)this.Parent).PushAsync(new DetailPage(e.SelectedItem as ChargePoint));
+        }
     }
 
     class ListViewPageViewModel : INotifyPropertyChanged

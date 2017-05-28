@@ -2,15 +2,44 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Cylecar.Views.DetailPage"
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
              Title="DetailPage">
-  <ScrollView>
-    <StackLayout Padding="10">
-      <Label Text="ContentPage" FontSize="40"/>
-      <Label Text="ContentPage is the simplest type of page."/>
-      <Label Text="The content of the ContentPage is generally a layout of some sort that can be a parent to multiple children."/>
-      <Label Text="This contant page contains a StackLayout, which in turn contains a few Label views (including the large one on the top and an example of handling click commands and data binding to a Label below)."/>
-      <Button Text="Click Me" Command="{Binding IncreaseCountCommand}"/>
-      <Label Text="{Binding CountDisplay}"/>
-    </StackLayout>
-  </ScrollView>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <OnPlatform x:Key="boxSize"
+                  x:TypeArguments="x:Double"
+                  iOS="20"
+                  Android="20"
+                  WinPhone="35" />
+
+            <!-- This is only an issue on the iPhone; Android and
+           WinPhone auto size the row height to the contents. -->
+            <OnPlatform x:Key="rowHeight"
+                  x:TypeArguments="x:Int32"
+                  iOS="90"
+                  Android="90"
+                  WinPhone="105" />
+
+
+
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ScrollView>
+        <StackLayout Orientation="Vertical">
+        <StackLayout Orientation="Horizontal">
+            <BoxView WidthRequest="{StaticResource boxSize}"
+                       HeightRequest="{StaticResource boxSize}"
+                       Color="{Binding Privado}" />
+            <StackLayout Padding="10">
+                <Label Text="{Binding Descripcion}" FontSize="40"/>
+                <Label Text="{Binding Edificio}"/>
+                <Label Text="{Binding Direccion}"/>
+                <Label Text="{Binding Calle}"/>
+                <Label Text="{Binding Localidad}"/>
+
+            </StackLayout>  
+        </StackLayout>
+            <maps:Map WidthRequest="320" HeightRequest="200" IsShowingUser="true" MapType="Hybrid" />
+        </StackLayout>
+    </ScrollView>
 </ContentPage>

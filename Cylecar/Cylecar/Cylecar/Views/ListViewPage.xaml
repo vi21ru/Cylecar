@@ -25,7 +25,7 @@
     </ContentPage.Resources>
     <ListView x:Name="estaciones"  RowHeight="{StaticResource rowHeight}" SeparatorVisibility="None"
                       Margin="20" SeparatorColor="Black" BackgroundColor="Transparent"
-                      HeightRequest="200" >
+                      HeightRequest="200" ItemSelected="estaciones_ItemSelected" >
         <ListView.ItemTemplate>
 
             <DataTemplate>

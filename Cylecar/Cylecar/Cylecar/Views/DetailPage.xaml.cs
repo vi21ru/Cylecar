@@ -1,4 +1,5 @@
-﻿using Cylecar.ViewModels;
+﻿using Cylecar.Models;
+using Cylecar.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,10 +18,10 @@ namespace Cylecar.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class DetailPage : ContentPage
     {
-        public DetailPage()
+        public DetailPage(ChargePoint cp)
         {
             InitializeComponent();
-            BindingContext = new ContentPageViewModel();
+            BindingContext = cp;
         }
     }
 
