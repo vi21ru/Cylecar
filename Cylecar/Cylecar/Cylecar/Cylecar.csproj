@@ -119,17 +119,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\026__logout.png" />
-    <None Include="Images\041__help.png" />
-    <None Include="Images\043__hint.png" />
-    <None Include="Images\069__hyperlink.png" />
-    <None Include="Images\071__earth.png" />
-    <None Include="Images\074__coordinates.png" />
-    <None Include="Images\081__setting_wrench.png" />
-    <None Include="Images\082__setting_cog.png" />
-    <None Include="Images\089__filter.png" />
-    <None Include="Images\095__search.png" />
-    <None Include="Images\101__home.png" />
     <None Include="Images\chinchetaAmbar.png" />
     <None Include="Images\chinchetaRoja.png" />
     <None Include="Images\chinchetaVerde.png" />
@@ -182,6 +171,20 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\coordinates.png" />
+    <Content Include="Images\earth.png" />
+    <Content Include="Images\filter.png" />
+    <Content Include="Images\help.png" />
+    <Content Include="Images\hint.png" />
+    <Content Include="Images\home.png" />
+    <Content Include="Images\hyperlink.png" />
+    <Content Include="Images\list_choose.png" />
+    <Content Include="Images\logout.png" />
+    <Content Include="Images\search.png" />
+    <Content Include="Images\setting_cog.png" />
+    <Content Include="Images\setting_wrench.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.2.3.4.231\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.3.4.231\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />

@@ -12,9 +12,9 @@
 
                 
 
-                <ListView x:Name="navigationList" RowHeight="40"
-                      Margin="10" SeparatorColor="Black" BackgroundColor="Transparent"  ItemSelected="NavigationList_ItemSelected"
-                      HeightRequest="200" >
+                <ListView x:Name="navigationList" RowHeight="60"
+                      Margin="20" BackgroundColor="Transparent"  ItemSelected="NavigationList_ItemSelected"
+                      HeightRequest="300" SeparatorColor="Black" SeparatorVisibility="Default" >
         
                     <ListView.ItemTemplate>
             
@@ -22,10 +22,9 @@
                 
                             <ViewCell>
                     
-                                <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="Center"
-                                         Orientation="Horizontal" Spacing="10" >
-                                    <Image Source="{Binding Icon}"></Image>
-                                    <Label Text="{Binding Title}" FontSize="24" FontAttributes="Bold" FontFamily="segoe ui"
+                                <StackLayout VerticalOptions="FillAndExpand" Orientation="Horizontal" Spacing="20" >
+                                    <Image Source="{Binding Icon}" HeightRequest="60"></Image>
+                                    <Label Text="{Binding Title}" FontSize="18" FontAttributes="Bold" FontFamily="segoe ui"
                                        VerticalOptions="Center" HorizontalOptions="Center" TextColor="Black"/>
 
                                 </StackLayout>

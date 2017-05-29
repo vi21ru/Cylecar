@@ -163,9 +163,21 @@
     <AndroidResource Include="Resources\drawable\masterback.png" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidResource Include="Resources\drawable\coordinates.png" />
+    <AndroidResource Include="Resources\drawable\earth.png" />
+    <AndroidResource Include="Resources\drawable\filter.png" />
+    <AndroidResource Include="Resources\drawable\help.png" />
+    <AndroidResource Include="Resources\drawable\hint.png" />
+    <AndroidResource Include="Resources\drawable\home.png" />
+    <AndroidResource Include="Resources\drawable\hyperlink.png" />
     <Content Include="Resources\drawable\iconBurguerV.png" />
     <AndroidResource Include="Resources\drawable\splash2.png" />
     <AndroidResource Include="Resources\drawable\splash.png" />
+    <AndroidResource Include="Resources\drawable\logout.png" />
+    <AndroidResource Include="Resources\drawable\search.png" />
+    <AndroidResource Include="Resources\drawable\setting_cog.png" />
+    <AndroidResource Include="Resources\drawable\setting_wrench.png" />
+    <AndroidResource Include="Resources\drawable\list_choose.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets" Condition="Exists('..\..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets')" />

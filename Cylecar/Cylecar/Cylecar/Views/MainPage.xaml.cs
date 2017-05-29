@@ -17,21 +17,20 @@ namespace Cylecar
 
             listaMenu = new List<MenuItemPage>();
 
-            var page1 = new MenuItemPage() { Title = "Lista de estaciones", Icon= "101__home.png", TargetType = typeof(ListViewPage) };
-            var page2 = new MenuItemPage() { Title = "Estaciones favoritas", Icon = "101__home.png", TargetType=typeof(CreditsPage) };
-            var page3 = new MenuItemPage() { Title = "Busquedas recientes", Icon = "101__home.png", TargetType = typeof(SearchPage) };
-            var page4 = new MenuItemPage() { Title = "Busqueda por ciudades", Icon = "101__home.png", TargetType = typeof(SearchPage) };
-            var page5 = new MenuItemPage() { Title = "Busqueda por provincias", Icon = "101__home.png", TargetType = typeof(SearchPage) };
-            var page6 = new MenuItemPage() { Title = "Creditos", Icon = "101__home.png", TargetType = typeof(CreditsPage) };
-            var page7 = new MenuItemPage() { Title = "Configuracion", Icon = "101__home.png", TargetType = typeof(ConfigPage) };
+            var page1 = new MenuItemPage() { Title = "Inicio", Icon= "home.png", TargetType = typeof(SearchPage) };
+            var page2 = new MenuItemPage() { Title = "Lista Estaciones", Icon = "list_choose.png", TargetType=typeof(ListViewPage) };
+            var page3 = new MenuItemPage() { Title = "Busqueda estaciones", Icon = "search.png", TargetType = typeof(SearchPage) };
+            var page4 = new MenuItemPage() { Title = "Configuracion", Icon = "setting_cog.png", TargetType = typeof(ConfigPage) };
+            var page5 = new MenuItemPage() { Title = "Creditos", Icon = "help.png", TargetType = typeof(CreditsPage) };
+            
 
             listaMenu.Add(page1);
             listaMenu.Add(page2);
             listaMenu.Add(page3);
             listaMenu.Add(page4);
             listaMenu.Add(page5);
-            listaMenu.Add(page6);
-            listaMenu.Add(page7);
+            //listaMenu.Add(page6);
+            //listaMenu.Add(page7);
 
 
             navigationList.ItemsSource = listaMenu;
