@@ -19,7 +19,7 @@ namespace Cylecar.Droid.Resources
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
-            System.Threading.Thread.Sleep(2000);
+            System.Threading.Thread.Sleep(1000);
             this.StartActivity(typeof(MainActivity));
 
             // Create your application here

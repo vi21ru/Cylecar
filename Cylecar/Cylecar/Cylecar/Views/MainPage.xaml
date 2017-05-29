@@ -6,16 +6,14 @@
              x:Class="Cylecar.MainPage">
     <MasterDetailPage.Master>
 
-        <ContentPage Title="Menu" Icon="iconBurguerV.png"  BackgroundColor="Black"  BackgroundImage="masterback.png">
+        <ContentPage Title="Menu" Icon="iconBurguerV.png"  BackgroundColor="Azure">
     
             <StackLayout Orientation="Vertical">
 
-                <StackLayout HeightRequest="100" Padding="50">
-                    <Image Source="icon.png" WidthRequest="100" HeightRequest="150"/>
-                </StackLayout>
+                
 
-                <ListView x:Name="navigationList" RowHeight="40" SeparatorVisibility="Default"
-                      Margin="20" SeparatorColor="Black" BackgroundColor="Transparent"  ItemSelected="NavigationList_ItemSelected"
+                <ListView x:Name="navigationList" RowHeight="40"
+                      Margin="10" SeparatorColor="Black" BackgroundColor="Transparent"  ItemSelected="NavigationList_ItemSelected"
                       HeightRequest="200" >
         
                     <ListView.ItemTemplate>
@@ -26,10 +24,10 @@
                     
                                 <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="Center"
                                          Orientation="Horizontal" Spacing="10" >
-                        
+                                    <Image Source="{Binding Icon}"></Image>
                                     <Label Text="{Binding Title}" FontSize="24" FontAttributes="Bold" FontFamily="segoe ui"
                                        VerticalOptions="Center" HorizontalOptions="Center" TextColor="Black"/>
-                    
+
                                 </StackLayout>
                 
                             </ViewCell>

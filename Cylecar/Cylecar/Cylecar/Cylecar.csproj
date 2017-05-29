@@ -119,25 +119,36 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Images\chinchetaAmbar.png" />
-    <Content Include="Images\chinchetaRoja.png" />
-    <Content Include="Images\chinchetaVerde.png" />
-    <Content Include="Images\electric-1876545_1280.png" />
-    <Content Include="Images\iconBurguer.png" />
-    <Content Include="Images\iconBurguerB.png" />
-    <Content Include="Images\iconBurguerC.png" />
-    <Content Include="Images\iconBurguerN.png" />
-    <Content Include="Images\iconBurguerV.png" />
-    <Content Include="Images\masterback.png" />
-    <Content Include="Images\mennekes.jpg" />
-    <Content Include="Images\mennekes.png" />
-    <Content Include="Images\mennekesW.png" />
-    <Content Include="Images\menuIMG.png" />
-    <Content Include="Images\schuko.jpg" />
-    <Content Include="Images\schuko.png" />
-    <Content Include="Images\schukoW.png" />
-    <Content Include="Images\splash.png" />
-    <Content Include="Images\splash2.png" />
+    <None Include="Images\026__logout.png" />
+    <None Include="Images\041__help.png" />
+    <None Include="Images\043__hint.png" />
+    <None Include="Images\069__hyperlink.png" />
+    <None Include="Images\071__earth.png" />
+    <None Include="Images\074__coordinates.png" />
+    <None Include="Images\081__setting_wrench.png" />
+    <None Include="Images\082__setting_cog.png" />
+    <None Include="Images\089__filter.png" />
+    <None Include="Images\095__search.png" />
+    <None Include="Images\101__home.png" />
+    <None Include="Images\chinchetaAmbar.png" />
+    <None Include="Images\chinchetaRoja.png" />
+    <None Include="Images\chinchetaVerde.png" />
+    <None Include="Images\electric-1876545_1280.png" />
+    <None Include="Images\iconBurguer.png" />
+    <None Include="Images\iconBurguerB.png" />
+    <None Include="Images\iconBurguerC.png" />
+    <None Include="Images\iconBurguerN.png" />
+    <None Include="Images\iconBurguerV.png" />
+    <None Include="Images\masterback.png" />
+    <None Include="Images\mennekes.jpg" />
+    <None Include="Images\mennekes.png" />
+    <None Include="Images\mennekesW.png" />
+    <None Include="Images\menuIMG.png" />
+    <None Include="Images\schuko.jpg" />
+    <None Include="Images\schuko.png" />
+    <None Include="Images\schukoW.png" />
+    <None Include="Images\splash.png" />
+    <None Include="Images\splash2.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
