@@ -55,7 +55,7 @@ namespace Cylecar.Services
             httpClient.DefaultRequestHeaders.Accept.TryParseAdd("application/csv");
             Uri uri = new Uri("http://www.datosabiertos.jcyl.es/web/jcyl/risp/es/energia/vehiculo_electrico/1284273412751.csv");
                 var s = httpClient.GetStringAsync(uri).Result; //obtengo string con datos
-
+                //Debug.WriteLine("var s: " + s.GetType() + " - " + s.ToString());
                 s = Regex.Replace(s, "\n\"", "&");
                 s = Regex.Replace(s, "\"", "");
                 //char caracter = '\\';

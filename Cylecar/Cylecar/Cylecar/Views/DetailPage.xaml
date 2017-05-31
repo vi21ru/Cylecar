@@ -39,7 +39,7 @@
 
             </StackLayout>  
         </StackLayout>
-            <maps:Map WidthRequest="320" HeightRequest="200" IsShowingUser="true" MapType="Hybrid" />
+            <maps:Map x:Name="myMap" WidthRequest="320" HeightRequest="200" IsShowingUser="true" MapType="Street" />
         </StackLayout>
     </ScrollView>
 </ContentPage>
