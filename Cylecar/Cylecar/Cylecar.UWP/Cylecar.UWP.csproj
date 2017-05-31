@@ -108,7 +108,35 @@
     <None Include="Cylecar.UWP_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Properties\Default.rd.xml" />
+    <Content Include="Assets\CylecarSplash100.png" />
+    <Content Include="Assets\CylecarSplash125.png" />
+    <Content Include="Assets\CylecarSplash150.png" />
+    <Content Include="Assets\CylecarSplash200.png" />
+    <Content Include="Assets\CylecarSplash400.png" />
+    <Content Include="Assets\splash.png" />
+    <Content Include="Assets\splash.scale-100.png" />
+    <Content Include="Images\chinchetaAmbar.png" />
+    <Content Include="Images\chinchetaRoja.png" />
+    <Content Include="Images\chinchetaVerde.png" />
+    <Content Include="Images\electric-1876545_1280.png" />
+    <Content Include="Images\iconBurguer.png" />
+    <Content Include="Images\iconBurguerB.png" />
+    <Content Include="Images\iconBurguerC.png" />
+    <Content Include="Images\iconBurguerN.png" />
+    <Content Include="Images\iconBurguerV.png" />
+    <Content Include="Images\masterback.png" />
+    <Content Include="Images\mennekes.jpg" />
+    <Content Include="Images\mennekes.png" />
+    <Content Include="Images\mennekesW.png" />
+    <Content Include="Images\menuIMG.png" />
+    <Content Include="Images\schuko.jpg" />
+    <Content Include="Images\schuko.png" />
+    <Content Include="Images\schukoW.png" />
+    <Content Include="Images\splash.png" />
+    <Content Include="Images\splash2.png" />
+    <Content Include="Properties\Default.rd.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Assets\LockScreenLogo.scale-100.png" />
     <Content Include="Assets\LockScreenLogo.scale-125.png" />
     <Content Include="Assets\LockScreenLogo.scale-150.png" />
