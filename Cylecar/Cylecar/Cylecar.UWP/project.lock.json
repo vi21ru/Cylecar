@@ -2031,6 +2031,16 @@
           }
         }
       },
+      "Xam.Plugin.Geolocator/3.0.4": {
+        "compile": {
+          "lib/UAP10/Plugin.Geolocator.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Geolocator.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/Plugin.Geolocator.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Geolocator.dll": {}
+        }
+      },
       "Xamarin.Forms/2.3.4.247": {
         "compile": {
           "lib/uap10.0/Xamarin.Forms.Core.dll": {},
@@ -4153,6 +4163,16 @@
         },
         "runtime": {
           "lib/netcore50/System.Xml.XmlSerializer.dll": {}
+        }
+      },
+      "Xam.Plugin.Geolocator/3.0.4": {
+        "compile": {
+          "lib/UAP10/Plugin.Geolocator.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Geolocator.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/Plugin.Geolocator.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Geolocator.dll": {}
         }
       },
       "Xamarin.Forms/2.3.4.247": {
@@ -6318,6 +6338,16 @@
           "runtimes/aot/lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "Xam.Plugin.Geolocator/3.0.4": {
+        "compile": {
+          "lib/UAP10/Plugin.Geolocator.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Geolocator.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/Plugin.Geolocator.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Geolocator.dll": {}
+        }
+      },
       "Xamarin.Forms/2.3.4.247": {
         "compile": {
           "lib/uap10.0/Xamarin.Forms.Core.dll": {},
@@ -8449,6 +8479,16 @@
         },
         "runtime": {
           "lib/netcore50/System.Xml.XmlSerializer.dll": {}
+        }
+      },
+      "Xam.Plugin.Geolocator/3.0.4": {
+        "compile": {
+          "lib/UAP10/Plugin.Geolocator.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Geolocator.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/Plugin.Geolocator.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Geolocator.dll": {}
         }
       },
       "Xamarin.Forms/2.3.4.247": {
@@ -10623,6 +10663,16 @@
           "runtimes/aot/lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "Xam.Plugin.Geolocator/3.0.4": {
+        "compile": {
+          "lib/UAP10/Plugin.Geolocator.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Geolocator.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/Plugin.Geolocator.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Geolocator.dll": {}
+        }
+      },
       "Xamarin.Forms/2.3.4.247": {
         "compile": {
           "lib/uap10.0/Xamarin.Forms.Core.dll": {},
@@ -12754,6 +12804,16 @@
         },
         "runtime": {
           "lib/netcore50/System.Xml.XmlSerializer.dll": {}
+        }
+      },
+      "Xam.Plugin.Geolocator/3.0.4": {
+        "compile": {
+          "lib/UAP10/Plugin.Geolocator.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Geolocator.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/Plugin.Geolocator.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Geolocator.dll": {}
         }
       },
       "Xamarin.Forms/2.3.4.247": {
@@ -14926,6 +14986,16 @@
         },
         "runtime": {
           "runtimes/aot/lib/netcore50/System.Xml.XmlSerializer.dll": {}
+        }
+      },
+      "Xam.Plugin.Geolocator/3.0.4": {
+        "compile": {
+          "lib/UAP10/Plugin.Geolocator.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Geolocator.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/Plugin.Geolocator.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Geolocator.dll": {}
         }
       },
       "Xamarin.Forms/2.3.4.247": {
@@ -20949,6 +21019,65 @@
         "runtimes/aot/lib/netcore50/System.Xml.XmlSerializer.dll"
       ]
     },
+    "Xam.Plugin.Geolocator/3.0.4": {
+      "sha512": "5UMAwRk+dk+Ar0Ei+Jd0H8G0a0tHsm9gJouCXMuGnvEFU2CzOJJKrNfH2QGi7eVfsd5/XHoJhhk6J0Pi38olXA==",
+      "type": "package",
+      "files": [
+        "Xam.Plugin.Geolocator.3.0.4.nupkg.sha512",
+        "Xam.Plugin.Geolocator.nuspec",
+        "lib/MonoAndroid10/Plugin.Geolocator.Abstractions.dll",
+        "lib/MonoAndroid10/Plugin.Geolocator.Abstractions.pdb",
+        "lib/MonoAndroid10/Plugin.Geolocator.Abstractions.xml",
+        "lib/MonoAndroid10/Plugin.Geolocator.dll",
+        "lib/MonoAndroid10/Plugin.Geolocator.pdb",
+        "lib/MonoAndroid10/Plugin.Geolocator.xml",
+        "lib/MonoTouch10/Plugin.Geolocator.Abstractions.dll",
+        "lib/MonoTouch10/Plugin.Geolocator.Abstractions.xml",
+        "lib/MonoTouch10/Plugin.Geolocator.dll",
+        "lib/MonoTouch10/Plugin.Geolocator.xml",
+        "lib/UAP10/Plugin.Geolocator.Abstractions.dll",
+        "lib/UAP10/Plugin.Geolocator.Abstractions.pdb",
+        "lib/UAP10/Plugin.Geolocator.Abstractions.xml",
+        "lib/UAP10/Plugin.Geolocator.dll",
+        "lib/UAP10/Plugin.Geolocator.pdb",
+        "lib/UAP10/Plugin.Geolocator.xml",
+        "lib/Xamarin.iOS10/Plugin.Geolocator.Abstractions.dll",
+        "lib/Xamarin.iOS10/Plugin.Geolocator.Abstractions.xml",
+        "lib/Xamarin.iOS10/Plugin.Geolocator.dll",
+        "lib/Xamarin.iOS10/Plugin.Geolocator.xml",
+        "lib/net45/Plugin.Geolocator.Abstractions.dll",
+        "lib/net45/Plugin.Geolocator.Abstractions.pdb",
+        "lib/net45/Plugin.Geolocator.Abstractions.xml",
+        "lib/net45/Plugin.Geolocator.dll",
+        "lib/net45/Plugin.Geolocator.pdb",
+        "lib/net45/Plugin.Geolocator.xml",
+        "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10/Plugin.Geolocator.Abstractions.dll",
+        "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10/Plugin.Geolocator.Abstractions.pdb",
+        "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10/Plugin.Geolocator.Abstractions.xml",
+        "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10/Plugin.Geolocator.dll",
+        "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10/Plugin.Geolocator.pdb",
+        "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10/Plugin.Geolocator.xml",
+        "lib/win8/Plugin.Geolocator.Abstractions.dll",
+        "lib/win8/Plugin.Geolocator.Abstractions.pdb",
+        "lib/win8/Plugin.Geolocator.Abstractions.xml",
+        "lib/win8/Plugin.Geolocator.dll",
+        "lib/win8/Plugin.Geolocator.pdb",
+        "lib/win8/Plugin.Geolocator.xml",
+        "lib/wp8/Plugin.Geolocator.Abstractions.dll",
+        "lib/wp8/Plugin.Geolocator.Abstractions.pdb",
+        "lib/wp8/Plugin.Geolocator.Abstractions.xml",
+        "lib/wp8/Plugin.Geolocator.dll",
+        "lib/wp8/Plugin.Geolocator.pdb",
+        "lib/wp8/Plugin.Geolocator.xml",
+        "lib/wpa81/Plugin.Geolocator.Abstractions.dll",
+        "lib/wpa81/Plugin.Geolocator.Abstractions.pdb",
+        "lib/wpa81/Plugin.Geolocator.Abstractions.xml",
+        "lib/wpa81/Plugin.Geolocator.dll",
+        "lib/wpa81/Plugin.Geolocator.pdb",
+        "lib/wpa81/Plugin.Geolocator.xml",
+        "readme.txt"
+      ]
+    },
     "Xamarin.Forms/2.3.4.247": {
       "sha512": "+6VN8IBSah7EcNJ4SV3pIhNA8tNlBaPLfr3+hQpPIllueJrXI5QtjM0tAJusPc2V1cYyC4YKvA1fs5c/A8RrBw==",
       "type": "package",
@@ -21110,6 +21239,7 @@
   "projectFileDependencyGroups": {
     "": [
       "Microsoft.NETCore.UniversalWindowsPlatform >= 5.2.2",
+      "Xam.Plugin.Geolocator >= 3.0.4",
       "Xamarin.Forms >= 2.3.4.247"
     ],
     "UAP,Version=v10.0": []

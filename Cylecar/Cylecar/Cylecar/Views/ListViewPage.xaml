@@ -15,9 +15,9 @@
            WinPhone auto size the row height to the contents. -->
             <OnPlatform x:Key="rowHeight"
                   x:TypeArguments="x:Int32"
-                  iOS="90"
-                  Android="90"
-                  WinPhone="105" />
+                  iOS="110"
+                  Android="110"
+                  WinPhone="125" />
 
             
 
@@ -45,10 +45,10 @@
 
                             <Label Text="{Binding Descripcion}"
                        FontAttributes="Bold"
-                       FontSize="Medium" />
+                       FontSize="Small" />
                             <Label Text="{Binding Edificio}"
                        FontAttributes="Bold"
-                       FontSize="Medium" />
+                       FontSize="Small" />
 
                             <!--<Label Text="{Binding Calle}" Grid.Row="2"></Label>
                         <Label Text="{Binding CodigoPostal}" Grid.Row="3"></Label>-->

@@ -6,7 +6,7 @@
              Title="Busqueda Estaciones">
     <StackLayout Orientation="Vertical">
         <SearchBar x:Name="sbSearch" Placeholder="Buscar" HorizontalTextAlignment="End" />
-        <maps:Map WidthRequest="320" HeightRequest="200" IsShowingUser="true" MapType="Hybrid" />
+        <maps:Map x:Name="myMap" WidthRequest="320" HeightRequest="200" IsShowingUser="true" MapType="Street" />
         <!--<Slider HeightRequest="20" WidthRequest="20" />-->
     </StackLayout>
 

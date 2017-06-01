@@ -8,9 +8,9 @@
         <ResourceDictionary>
             <OnPlatform x:Key="boxSize"
                   x:TypeArguments="x:Double"
-                  iOS="20"
-                  Android="20"
-                  WinPhone="35" />
+                  iOS="10"
+                  Android="10"
+                  WinPhone="25" />
 
             <!-- This is only an issue on the iPhone; Android and
            WinPhone auto size the row height to the contents. -->
@@ -31,13 +31,36 @@
                        HeightRequest="{StaticResource boxSize}"
                        Color="{Binding Privado}" />
             <StackLayout Padding="10">
-                <Label Text="{Binding Descripcion}" FontSize="40"/>
-                <Label Text="{Binding Edificio}"/>
-                <Label Text="{Binding Direccion}"/>
-                <Label Text="{Binding Calle}"/>
-                <Label Text="{Binding Localidad}"/>
+                    <Label Text="{Binding Descripcion}" Font="Bold" FontSize="20" HorizontalTextAlignment="Center"/>
+                    <Label>
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Edificio" Font="Bold" FontSize="Medium"   ForegroundColor="DarkGreen"></Span>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label Text="{Binding Edificio}" Font="Bold" FontSize="Medium"/>
+                    <!--<Label Text="Direccion" Font="Bold" TextColor="DarkGreen" ></Label>
+                    <Label Text="{Binding Direccion}"/>-->
+                    <Label>
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Direccion" Font="Bold" FontSize="Medium"   ForegroundColor="DarkGreen"></Span>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label Text="{Binding Calle}" Font="Bold" FontSize="Medium"/>
+                    <Label>
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Localidad" Font="Bold" FontSize="Medium" ForegroundColor="DarkGreen"></Span>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label Text="{Binding Localidad}" Font="Bold" FontSize="Medium"/>
+                    <Button Text="Web" Clicked="Button_Clicked" HeightRequest="30" ></Button>
 
-            </StackLayout>  
+                </StackLayout>  
         </StackLayout>
             <maps:Map x:Name="myMap" WidthRequest="320" HeightRequest="200" IsShowingUser="true" MapType="Street" />
         </StackLayout>
