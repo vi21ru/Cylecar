@@ -21,9 +21,6 @@ namespace Cylecar.Views
 {
 
     [XamlCompilation(XamlCompilationOptions.Compile)]
-
-    
-
     public partial class SearchPage : ContentPage
     {
         List<ChargePoint> listaEstaciones;
@@ -41,10 +38,10 @@ namespace Cylecar.Views
         {
             var locator = CrossGeolocator.Current;
             locator.DesiredAccuracy = 100;
-            var position = await locator.GetPositionAsync(5000);//se supone que obtiene mi posicion pero obtiene microsoft headquarters
+            //var position = await locator.GetPositionAsync(5000);//se supone que obtiene mi posicion pero obtiene microsoft headquarters
             var goyoPosition = new Position(41.6402549, -4.7344017);
             myMap.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(goyoPosition.Latitude, goyoPosition.Longitude), Distance.FromKilometers(0.1)));
-           Debug.WriteLine("MY POSITION: LATITUDE: "+position.Latitude+" LONGITUDE:"+position.Longitude);
+           //Debug.WriteLine("MY POSITION: LATITUDE: "+position.Latitude+" LONGITUDE:"+position.Longitude);
 
            
             var pinGoyo = new Pin

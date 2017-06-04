@@ -3,10 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Cylecar"
              xmlns:img="clr-namespace:Cylecar.Images"
-             x:Class="Cylecar.MainPage">
+             x:Class="Cylecar.MainPage"
+             BackgroundColor="LightBlue">
     <MasterDetailPage.Master>
 
-        <ContentPage Title="Menu" Icon="iconBurguerV.png"  BackgroundColor="Azure">
+        <ContentPage Title="Menu" Icon="iconBurguerV.png"  BackgroundColor="LightBlue">
     
             <StackLayout Orientation="Vertical">
 
