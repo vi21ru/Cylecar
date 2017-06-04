@@ -12,18 +12,13 @@
                   Android="10"
                   WinPhone="25" />
 
-            <!-- This is only an issue on the iPhone; Android and
-           WinPhone auto size the row height to the contents. -->
             <OnPlatform x:Key="rowHeight"
                   x:TypeArguments="x:Int32"
                   iOS="90"
                   Android="90"
                   WinPhone="105" />
-
-
-
         </ResourceDictionary>
-    </ContentPage.Resources>
+     </ContentPage.Resources>
     <ScrollView>
         <StackLayout Orientation="Vertical">
         <StackLayout Orientation="Horizontal">
@@ -58,7 +53,7 @@
                         </Label.FormattedText>
                     </Label>
                     <Label Text="{Binding Localidad}" Font="Bold" FontSize="Medium"/>
-                    <Button Text="Web" Clicked="Button_Clicked" HeightRequest="30" ></Button>
+                    <Button Text="Web" Clicked="Button_Clicked" HeightRequest="50" ></Button>
 
                 </StackLayout>  
         </StackLayout>

@@ -32,6 +32,7 @@ namespace Cylecar.Views
             InitializeComponent();
             getPosition();
             getPins();
+            sbSearch.TextChanged += (sender2, e2) => FilterCities(sbSearch.Text);
             //myMap.MoveToRegion(MapSpan.FromCenterAndRadius(new Xamarin.Forms.Maps.Position(latitude, longitude), Distance.FromMiles(1)).WithZoom(20));
 
         }
@@ -76,6 +77,28 @@ namespace Cylecar.Views
                 };
                 myMap.Pins.Add(pin);
             }
+        }
+
+        private void FilterCities(string filter)
+        {
+            List<ChargePoint> resultList = new List<ChargePoint>();
+            SearchService ss = new SearchService();
+            resultList = ss.ResultSearch(filter, listaEstaciones);
+            myMap.Pins.Clear();
+            foreach (ChargePoint estacion in resultList)
+            {
+                var pin = new Pin
+                {
+                    Address = estacion.Calle,
+                    Label = estacion.Edificio,
+                    Type = PinType.Place,
+                    Position = estacion.Localizacion
+                };
+                myMap.Pins.Add(pin);
+            }
+
+
+
         }
     }
 

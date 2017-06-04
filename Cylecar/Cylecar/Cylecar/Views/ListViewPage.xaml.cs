@@ -25,8 +25,8 @@ namespace Cylecar.Views
             InitializeComponent();
             
             JsonContent();
-            
-            
+            sbSearch.TextChanged += (sender2, e2) => Filter(sbSearch.Text);
+
         }
         public void JsonContent() {
             RestService rs = new RestService();
@@ -39,6 +39,18 @@ namespace Cylecar.Views
         {
             var item = (ChargePoint)e.SelectedItem;
             ((NavigationPage)this.Parent).PushAsync(new DetailPage(e.SelectedItem as ChargePoint));
+        }
+
+        private void Filter(string filter)
+        {
+            List<ChargePoint> resultList = new List<ChargePoint>();
+            SearchService ss = new SearchService();
+            resultList = ss.ResultSearch(filter, listaEstaciones);
+            estaciones.ItemsSource = resultList;
+            
+
+
+
         }
     }
 

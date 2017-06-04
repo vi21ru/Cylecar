@@ -23,8 +23,10 @@
 
         </ResourceDictionary>
     </ContentPage.Resources>
+    <StackLayout>
+        <SearchBar x:Name="sbSearch" Placeholder="Buscar" HorizontalTextAlignment="End" />
     <ListView x:Name="estaciones"  RowHeight="{StaticResource rowHeight}" SeparatorVisibility="None"
-                      Margin="20" SeparatorColor="Black" BackgroundColor="Transparent"
+                      Margin="0" SeparatorColor="Black" BackgroundColor="Transparent"
                       HeightRequest="200" ItemSelected="estaciones_ItemSelected" >
         <ListView.ItemTemplate>
 
@@ -63,4 +65,5 @@
         </ListView.ItemTemplate>
         
     </ListView>
+    </StackLayout>
 </ContentPage>
