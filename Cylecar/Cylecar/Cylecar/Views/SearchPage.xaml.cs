@@ -1,4 +1,6 @@
-﻿using Cylecar.ViewModels;
+﻿using Cylecar.Models;
+using Cylecar.Services;
+using Cylecar.ViewModels;
 using Plugin.Geolocator;
 using System;
 using System.Collections.Generic;
@@ -19,13 +21,17 @@ namespace Cylecar.Views
 {
 
     [XamlCompilation(XamlCompilationOptions.Compile)]
+
+    
+
     public partial class SearchPage : ContentPage
     {
-       public SearchPage()
+        List<ChargePoint> listaEstaciones;
+        public SearchPage()
         {
             InitializeComponent();
             getPosition();
-
+            getPins();
             //myMap.MoveToRegion(MapSpan.FromCenterAndRadius(new Xamarin.Forms.Maps.Position(latitude, longitude), Distance.FromMiles(1)).WithZoom(20));
 
         }
@@ -38,18 +44,38 @@ namespace Cylecar.Views
             var goyoPosition = new Position(41.6402549, -4.7344017);
             myMap.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(goyoPosition.Latitude, goyoPosition.Longitude), Distance.FromKilometers(0.1)));
            Debug.WriteLine("MY POSITION: LATITUDE: "+position.Latitude+" LONGITUDE:"+position.Longitude);
+
+           
             var pinGoyo = new Pin
             {
                 Position = new Position(41.6402549, -4.7344017),
                 Address = "Calle de Gabilondo, 23, 47007 Valladolid",
                 Label = "Gregorio Fernandez",
-                Type = PinType.Place
+                Type = PinType.SavedPin
+               
             };
             myMap.Pins.Add(pinGoyo);
 
         }
-        private async void getPins() {
-            
+        private void getPins() {
+            JsonContent();
+        }
+
+        private void JsonContent()
+        {
+            RestService rs = new RestService();
+            listaEstaciones = new List<ChargePoint>();
+            rs.getData(listaEstaciones);
+            foreach (ChargePoint estacion in listaEstaciones) {
+                var pin = new Pin
+                {
+                    Address = estacion.Calle,
+                    Label = estacion.Edificio,
+                    Type = PinType.Place,
+                    Position = estacion.Localizacion
+                };
+                myMap.Pins.Add(pin);
+            }
         }
     }
 
